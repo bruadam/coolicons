@@ -1,6 +1,6 @@
 {
   "name": "react-native-coolicons-library",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "React Native / Expo friendly wrapper for CoolIcons (SVG -> react-native-svg components)",
   "main": "index.js",
   "files": [
