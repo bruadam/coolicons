@@ -1,0 +1,24 @@
+import * as React from "react";
+import Svg, { G, Path } from "react-native-svg";
+const ArrowSubLeftDown = (props) => (
+  <Svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill={color}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <G id="Arrow / Arrow_Sub_Left_Down">
+      <Path
+        id="Vector"
+        d="M13.5 12.5L8.5 17.5M8.5 17.5L3.5 12.5M8.5 17.5V9.7002C8.5 8.58009 8.5 8.01962 8.71799 7.5918C8.90973 7.21547 9.21547 6.90973 9.5918 6.71799C10.0196 6.5 10.5801 6.5 11.7002 6.5H21.5002"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </G>
+  </Svg>
+);
+export default ArrowSubLeftDown;

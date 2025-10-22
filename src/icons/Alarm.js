@@ -1,0 +1,24 @@
+import * as React from "react";
+import Svg, { G, Path } from "react-native-svg";
+const Alarm = (props) => (
+  <Svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill={color}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <G id="Calendar / Alarm">
+      <Path
+        id="Vector"
+        d="M12 7V12H17M21.0036 4.57115L17.9395 2M6.06418 2L3 4.57115M12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </G>
+  </Svg>
+);
+export default Alarm;

@@ -1,7 +1,54 @@
 ![coolicons by Kryston Schwarze](https://github.com/krystonschwarze/coolicons/blob/master/coolicons-feature-card.png?raw=true)
 
 
-# coolicons
+# react-native-coolicons
+
+React Native / Expo friendly wrapper for CoolIcons (SVG -> react-native-svg components)
+
+## Installation
+
+```bash
+npm install react-native-coolicons react-native-svg
+```
+
+or
+
+```bash
+yarn add react-native-coolicons react-native-svg
+```
+
+## Usage
+
+### Dynamic Icon by Name
+
+```jsx
+import Icon from 'react-native-coolicons';
+
+<Icon name="Arrow_Circle_Down" size={24} color="black" />
+```
+
+### Named Imports
+
+```jsx
+import { ArrowCircleDown } from 'react-native-coolicons';
+
+<ArrowCircleDown size={24} color="black" />
+```
+
+## Props
+
+- `name` (string): The icon name (for dynamic import)
+- `size` (number, default 24): Icon size
+- `color` (string, default 'currentColor'): Icon color
+- `style` (object): Additional styles
+
+## Available Icons
+
+All icons from the CoolIcons set are available. Icon names match the original SVG filenames, e.g., `Arrow_Circle_Down` becomes `ArrowCircleDown` for named imports.
+
+## License
+
+MIT
 
 coolicons is a carefully designed collection of 440+ icons with a focus on simplicity and consistency. Perfectly suited for web, application and mobile design.
 
