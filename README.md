@@ -1,54 +1,7 @@
 ![coolicons by Kryston Schwarze](https://github.com/krystonschwarze/coolicons/blob/master/coolicons-feature-card.png?raw=true)
 
 
-# react-native-coolicons
-
-React Native / Expo friendly wrapper for CoolIcons (SVG -> react-native-svg components)
-
-## Installation
-
-```bash
-npm install react-native-coolicons react-native-svg
-```
-
-or
-
-```bash
-yarn add react-native-coolicons react-native-svg
-```
-
-## Usage
-
-### Dynamic Icon by Name
-
-```jsx
-import Icon from 'react-native-coolicons';
-
-<Icon name="Arrow_Circle_Down" size={24} color="black" />
-```
-
-### Named Imports
-
-```jsx
-import { ArrowCircleDown } from 'react-native-coolicons';
-
-<ArrowCircleDown size={24} color="black" />
-```
-
-## Props
-
-- `name` (string): The icon name (for dynamic import)
-- `size` (number, default 24): Icon size
-- `color` (string, default 'currentColor'): Icon color
-- `style` (object): Additional styles
-
-## Available Icons
-
-All icons from the CoolIcons set are available. Icon names match the original SVG filenames, e.g., `Arrow_Circle_Down` becomes `ArrowCircleDown` for named imports.
-
-## License
-
-MIT
+# coolicons
 
 coolicons is a carefully designed collection of 440+ icons with a focus on simplicity and consistency. Perfectly suited for web, application and mobile design.
 
@@ -84,6 +37,41 @@ Add "coolicons-sprite.svg" to your project.
 <use xlink:href="#Icon_Name"></use>
 ```
 
+## Use in React Native
+
+You can use coolicons in React Native by following these steps:
+
+1. Install `react-native-coolicons-library` package:
+   ```bash
+   npm install react-native-coolicons-library
+   ```
+   or
+   ```bash
+   yarn add react-native-coolicons-library
+   ```
+2. Import the icon component and use it in your React Native code:
+
+   ```javascript
+   import { Cupcake } from 'react-native-coolicons-library';
+   
+   // Default usage
+   <Cupcake /> // Size: 24, Color: Black
+   // Customized usage
+   <Cupcake size={30} color="#ff0000" /> // Size: 30, Color: Red
+
+   // Advance usage with additional props
+   <Cupcake size={40} color="#00ff00" style={{ margin: 10, opacity: 0.5 }} /> // Size: 40, Color: Green, with additional styles: margin and opacity
+   ```
+
+## Use in Raycast
+
+You can use coolicons in Raycast by following these steps:
+1. Open Raycast and type `Store`
+2. Search for `Coolicons` in the Store
+3. Install the Coolicons extension
+4. Once installed, you can access the Coolicons extension from the Raycast command bar by typing `Search Coolicons`.
+
+![Coolicons in Raycast](/coolicons-raycast/media/coolicons-raycast.png)
 
 ## Support my work and get coolicons PRO
 

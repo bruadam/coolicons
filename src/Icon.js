@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { iconMap } from './icons';
 
-const Icon = ({ name, size = 24, color = 'currentColor', style, ...props }) => {
+const Icon = ({ name, size = 24, color = '#000000', style, ...props }) => {
   const IconComponent = iconMap[name];
   if (!IconComponent) {
     console.warn(`Icon "${name}" not found.`);
