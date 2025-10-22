@@ -19,7 +19,7 @@ const glob = require('glob');
 const { transform } = require('@svgr/core');
 const prettier = require('prettier');
 
-const INPUT_DIR = path.resolve(__dirname, '..', 'icons-svg');
+const INPUT_DIR = path.resolve(__dirname, '..', 'coolicons SVG');
 const OUT_DIR = path.resolve(__dirname, '..', 'src', 'icons');
 const INDEX_FILE = path.join(OUT_DIR, 'index.js');
 
@@ -37,9 +37,7 @@ const SVGR_OPTIONS = {
   },
   template: (variables, { tpl }) => {
     // variables: { componentName, props, jsx, exports }
-    return tpl`import * as React from 'react';
-import Svg, { G } from 'react-native-svg';
-${variables.imports}
+    return tpl`${variables.imports}
 const ${variables.componentName} = (${variables.props}) => ${variables.jsx};
 export default ${variables.componentName};
 `;
@@ -69,7 +67,7 @@ export default ${variables.componentName};
         .split(' ')
         .map(s => s.charAt(0).toUpperCase() + s.slice(1))
         .join('');
-      const componentName = pascal.endsWith('Icon') ? pascal : `${pascal}Icon`;
+      const componentName = pascal;
 
       // Transform with SVGR for react-native
       const jsCode = await transform(svgCode, SVGR_OPTIONS, { componentName });
