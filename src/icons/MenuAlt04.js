@@ -8,6 +8,7 @@ const MenuAlt04 = (props) => (
     fill={color}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
+    style={style}
   >
     <G id="Menu / Menu_Alt_04">
       <Path

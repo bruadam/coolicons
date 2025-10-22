@@ -8,6 +8,7 @@ const CreditCard01 = (props) => (
     fill={color}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
+    style={style}
   >
     <G id="Interface / Credit_Card_01">
       <Path

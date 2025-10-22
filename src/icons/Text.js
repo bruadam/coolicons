@@ -1,12 +1,13 @@
 import * as React from "react";
 import Svg, { G, Path } from "react-native-svg";
-const Text = (props) => (
+const TextIcon = ({ size = 24, color = "#000000", style, ...props }) => (
   <Svg
     width={size}
     height={size}
     viewBox="0 0 24 24"
     fill={color}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     {...props}
   >
     <G id="Edit / Text">
@@ -21,4 +22,4 @@ const Text = (props) => (
     </G>
   </Svg>
 );
-export default Text;
+export default TextIcon;

@@ -73,7 +73,7 @@ export { default as Triangle } from "./Triangle";
 export { default as Square } from "./Square";
 export { default as Shield } from "./Shield";
 export { default as Octagon } from "./Octagon";
-export { default as Circle } from "./Circle";
+export { default as CircleIcon } from "./CircleIcon";
 export { default as Navigation } from "./Navigation";
 export { default as MapPin } from "./MapPin";
 export { default as Map } from "./Map";
@@ -261,7 +261,7 @@ export { default as TextAlignRight } from "./TextAlignRight";
 export { default as TextAlignLeft } from "./TextAlignLeft";
 export { default as TextAlignJustify } from "./TextAlignJustify";
 export { default as TextAlignCenter } from "./TextAlignCenter";
-export { default as Text } from "./Text";
+export { default as TextIcon } from "./TextIcon";
 export { default as TableRemove } from "./TableRemove";
 export { default as TableAdd } from "./TableAdd";
 export { default as Table } from "./Table";
@@ -278,7 +278,7 @@ export { default as Rows } from "./Rows";
 export { default as RemoveMinusCircle } from "./RemoveMinusCircle";
 export { default as RemoveMinus } from "./RemoveMinus";
 export { default as Redo } from "./Redo";
-export { default as Path } from "./Path";
+export { default as PathIcon } from "./PathIcon";
 export { default as Paragraph } from "./Paragraph";
 export { default as PaperclipAttechmentTilt } from "./PaperclipAttechmentTilt";
 export { default as PaperclipAttechmentHorizontal } from "./PaperclipAttechmentHorizontal";
@@ -517,7 +517,7 @@ export const iconMap = {
   Square: Square,
   Shield: Shield,
   Octagon: Octagon,
-  Circle: Circle,
+  Circle: CircleIcon,
   Navigation: Navigation,
   Map_Pin: MapPin,
   Map: Map,
@@ -705,7 +705,7 @@ export const iconMap = {
   Text_Align_Left: TextAlignLeft,
   Text_Align_Justify: TextAlignJustify,
   Text_Align_Center: TextAlignCenter,
-  Text: Text,
+  Text: TextIcon,
   Table_Remove: TableRemove,
   Table_Add: TableAdd,
   Table: Table,
@@ -722,7 +722,7 @@ export const iconMap = {
   Remove_Minus_Circle: RemoveMinusCircle,
   Remove_Minus: RemoveMinus,
   Redo: Redo,
-  Path: Path,
+  Path: PathIcon,
   Paragraph: Paragraph,
   Paperclip_Attechment_Tilt: PaperclipAttechmentTilt,
   Paperclip_Attechment_Horizontal: PaperclipAttechmentHorizontal,

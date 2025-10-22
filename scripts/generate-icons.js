@@ -67,26 +67,41 @@ export default ${variables.componentName};
         .split(' ')
         .map(s => s.charAt(0).toUpperCase() + s.slice(1))
         .join('');
-      const componentName = pascal;
+      
+      // SVG element names that conflict with react-native-svg imports
+      const svgElementNames = ['Path', 'Circle', 'Rect', 'Line', 'Text', 'G', 'Defs', 'ClipPath', 'Mask', 'Ellipse', 'Polygon', 'Polyline'];
+      const componentName = svgElementNames.includes(pascal) ? `${pascal}Icon` : pascal;
 
       // Transform with SVGR for react-native
       const jsCode = await transform(svgCode, SVGR_OPTIONS, { componentName });
 
-      // Tweak props: accept size and color, map to width/height/fill
-      const wrapped = jsCode.replace(
+      // Tweak props: accept size, color, and style
+      let wrapped = jsCode.replace(
         /const\s+([A-Za-z0-9_]+)\s*=\s*\(\s*props\s*\)\s*=>/, 
         (m, p1) =>
-          `const ${p1} = ({ size = 24, color = 'currentColor', style, ...props }) =>`
+          `const ${p1} = ({ size = 24, color = '#000000', style, ...props }) =>`
       ).replace(/width={\d+} height={\d+}/g, 'width={size} height={size}')
         .replace(/fill="(.*?)"/g, 'fill={color}');
+      
+      // Add style prop to Svg component
+      wrapped = wrapped.replace(
+        /(<Svg[^>]*)(\/?>)/,
+        (match, opening, closing) => {
+          // If Svg doesn't have style prop, add it
+          if (!opening.includes('style=')) {
+            return `${opening} style={style}${closing}`;
+          }
+          return match;
+        }
+      );
 
       // Prettify
       const pretty = prettier.format(wrapped, { parser: 'babel' });
 
-      const outFile = path.join(OUT_DIR, `${pascal}.js`);
+      const outFile = path.join(OUT_DIR, `${componentName}.js`);
       await fs.writeFile(outFile, pretty, 'utf8');
 
-      iconNames.push({ base, pascal });
+      iconNames.push({ base, pascal: componentName });
       console.log(`Generated ${outFile}`);
     }
 

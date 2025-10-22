@@ -8,6 +8,7 @@ const TextAlignCenter = (props) => (
     fill={color}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
+    style={style}
   >
     <G id="Edit / Text_Align_Center">
       <Path
